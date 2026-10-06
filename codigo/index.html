@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Gestão de Fornecedores</title>
+    <script>
+        function validarLogin(event) {
+            event.preventDefault();
+            var usuario = document.getElementById("usuario").value.trim();
+            
+            if (usuario === "") {
+                window.location.href = "msg.html";
+            } else if (usuario === "admin") {
+                window.location.href = "pg001.html";
+            } else {
+                window.location.href = "pg002.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Sistema de Gestão de Fornecedores</h2>
+    <form onsubmit="validarLogin(event)">
+        <label>USUÁRIO</label>
+        <input type="text" id="usuario" name="usuario"><br><br>
+        <label>SENHA</label>
+        <input type="password" id="senha" name="senha"><br><br>
+        <button type="submit">ENTRAR</button>
+    </form>
+</body>
+</html>
