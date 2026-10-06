@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    <title>Login - Gestão de Fornecedores</title>
+    <script>
+        function validarLogin(event) {
+            event.preventDefault();
+            var usuario = document.getElementById("usuario").value.trim();
+            
+            if (usuario === "") {
+                window.location.href = "msg.html";
+            } else if (usuario === "admin") {
+                window.location.href = "pg001.html";
+            } else {
+                window.location.href = "pg002.html";
+            }
+        }
+    </script>
+</head>
 <head>
     <title>Login - Gestão de Fornecedores</title>
     <script>
